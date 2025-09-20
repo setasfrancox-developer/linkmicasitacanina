@@ -10,7 +10,7 @@
 
 /* Body */
 body {
-  background: #e9d8fd; /* Fondo exterior */
+  background: #e9d8fd;
   font-family: 'Poppins', Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -27,7 +27,6 @@ body {
   width: 100%;
   max-width: 420px;
   min-height: 90vh;
-
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -121,34 +120,40 @@ footer p {
   color: #777;
 }
 
-/* ====== Media Queries para móviles y tablets ====== */
-@media (max-width: 768px) {
+/* ====== Media Queries ultra seguras para móviles ====== */
+@media (max-width: 780px) {
+  body {
+    padding: 10px !important;
+  }
+
   .container {
-    border-radius: 0 !important;  /* Sin bordes redondeados */
-    box-shadow: none !important;  /* Sin sombra */
-    padding: 15px !important;     /* Ajuste de padding */
-    min-height: auto;              /* Ajusta altura al contenido */
+    border-radius: 0 !important;  /* Quitar bordes redondeados */
+    box-shadow: none !important;  /* Quitar sombra */
+    padding: 15px !important;
+    min-height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   header h1 {
-    font-size: 1.5rem;            /* Ajuste nombre */
+    font-size: 1.5rem !important;
   }
 
   header h2 {
-    font-size: 0.9rem;            /* Ajuste subtítulo */
+    font-size: 0.9rem !important;
   }
 
   main ul li a {
-    font-size: 0.95rem;           /* Ajuste botones */
-    padding: 12px;
+    font-size: 0.95rem !important;
+    padding: 12px !important;
   }
 
   .social img {
-    width: 28px;
-    height: 28px;
+    width: 28px !important;
+    height: 28px !important;
   }
 
   footer p {
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
   }
 }
