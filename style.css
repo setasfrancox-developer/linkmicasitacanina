@@ -1,0 +1,121 @@
+/* Importar fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e9d8fd; /* Fondo exterior */
+  font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+  background: #fff;
+  border-radius: 24px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 420px;
+  min-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header {
+  margin-top: 30px;       /* baja un poco el bloque */
+  margin-bottom: 20px;    /* acerca más los botones */
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px; /* centrado con espacio debajo */
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+/* Main (botones) */
+main {
+  margin-bottom: 20px; /* acerca al footer */
+}
+
+main ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+main ul li a {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  border: 2px solid #6b46c1;
+  background: transparent;
+  color: #6b46c1;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+main ul li a:hover {
+  background: #6b46c1;
+  color: #fff;
+}
+
+/* Bloque de redes sociales */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 20px 0; /* espacio arriba y abajo */
+}
+
+.social img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  margin-bottom: 20px; /* no tan pegado abajo */
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: #777;
+}
