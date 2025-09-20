@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100dvh;
+  min-height: 100vh;
 }
 
 /* --- Contenedor principal --- */
@@ -25,6 +25,8 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  min-height: 100vh;
+  overflow-y: auto; /* Permite scroll si el contenido es más alto */
 }
 
 /* --- Header --- */
@@ -67,6 +69,7 @@ main ul {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  padding: 0;
 }
 
 main ul li a,
@@ -99,6 +102,8 @@ main a.btn-menu:hover {
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
   cursor: pointer;
+  position: relative; /* asegura que sea clickeable */
+  z-index: 1;
 }
 
 .faq-item h3 {
@@ -166,15 +171,15 @@ footer p {
 @media (max-width: 780px) {
   body {
     padding: 0;
-    min-height: auto;
   }
 
   .container {
     border-radius: 0;
     box-shadow: none;
-    min-height: 100dvh;
+    min-height: 100vh; /* más compatible que 100dvh */
     max-width: 100%;
     padding: 15px;
+    overflow-y: auto;
   }
 
   header, main, footer {
