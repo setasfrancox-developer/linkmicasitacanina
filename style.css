@@ -1,24 +1,24 @@
 /* Importar fuente Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Reset */
+/* --- Reset --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* --- Body --- */
 body {
   background: #e9d8fd;
   font-family: 'Poppins', Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100dvh; 
+  min-height: 100dvh;
 }
 
-/* Contenedor principal */
+/* --- Contenedor principal --- */
 .container {
   background: #fff;
   width: 100%;
@@ -27,10 +27,11 @@ body {
   text-align: center;
 }
 
-/* Header */
+/* --- Header --- */
 header {
   margin-top: 30px;
   margin-bottom: 20px;
+  padding: 0 10px;
 }
 
 .logo {
@@ -47,7 +48,8 @@ header h1 {
   margin-bottom: 10px;
 }
 
-header h2 {
+header h2,
+header p {
   font-size: 1rem;
   font-weight: 400;
   color: #444;
@@ -55,7 +57,7 @@ header h2 {
   line-height: 1.4;
 }
 
-/* Main (botones) */
+/* --- Main --- */
 main {
   margin-bottom: 20px;
 }
@@ -68,7 +70,8 @@ main ul {
 }
 
 main ul li a,
-main ul li a.btn-menu {
+main ul li a.btn-menu,
+main a.btn-menu {
   display: block;
   text-align: center;
   padding: 14px;
@@ -83,12 +86,38 @@ main ul li a.btn-menu {
 }
 
 main ul li a:hover,
-main ul li a.btn-menu:hover {
+main ul li a.btn-menu:hover,
+main a.btn-menu:hover {
   background: #6b46c1;
   color: #fff;
 }
 
-/* Bloque de redes sociales */
+/* --- FAQ --- */
+.faq-item {
+  margin-bottom: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-item h3 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.faq-item p {
+  display: none;
+  color: #444;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.faq-item.active p {
+  display: block;
+}
+
+/* --- Redes sociales --- */
 .social {
   display: flex;
   justify-content: center;
@@ -106,7 +135,7 @@ main ul li a.btn-menu:hover {
   transform: scale(1.1);
 }
 
-/* Footer */
+/* --- Footer --- */
 footer {
   margin-bottom: 20px;
 }
@@ -118,7 +147,7 @@ footer p {
 
 /* --- Media Queries --- */
 
-/* Estilos para computadoras */
+/* Computadoras */
 @media (min-width: 781px) {
   body {
     padding: 20px;
@@ -133,7 +162,7 @@ footer p {
   }
 }
 
-/* Estilos para móviles */
+/* Móviles */
 @media (max-width: 780px) {
   body {
     padding: 0;
@@ -161,7 +190,8 @@ footer p {
     font-size: 1.8rem;
   }
 
-  header h2 {
+  header h2,
+  header p {
     font-size: 1rem;
   }
 

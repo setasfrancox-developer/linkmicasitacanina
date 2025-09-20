@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes - MiCasitaCanina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://i.postimg.cc/VkDrbnL4/Pngtree-question-mark-sign-flat-design-5688049.png" alt="Logo" class="logo">
+      <h1>Preguntas Frecuentes</h1>
+    </header>
+
+    <main>
+      <div class="faq-item">
+        <h3>¿Cuáles son nuestros horarios?</h3>
+        <p>Estamos abiertos de lunes a sábado de 9:00 a 12:30 y 2:00 a 5:00.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo visitar las instalaciones antes de reservar?</h3>
+        <p>Visitar el lugar donde se quedará tu perro es fundamental. En nuestro centro, siempre te invitamos a conocer nuestras instalaciones y a hablar directamente con nuestro equipo para que te sientas completamente seguro..</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Aceptamos perros de todas las razas y tamaños?</h3>
+        <p>Por supuesto, todos los perros son bienvenidos, siempre que sean sociables y estén al día con sus vacunas.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Mi perro estara acompañado todo el tiempo?</h3>
+        <p>Sí, nunca están solos. Siempre hay personal cualificado supervisando y acompañándolos.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Que necesita llevar mi perro el primer día?</h3>
+        <p>Su cartilla veterinaria, el alimento,  algo que le guste (como su juguete o manta) y muchas ganas de pasarlo bien..</p>
+      </div>
+      <a href="index.html" class="btn-menu">Volver</a>
+    </main>
+      <footer>
+      <p>© 2025 Mi casita canina</p>
+    </footer>
+  </div>
+  <div>
+  
+  
+
+  <script>
+    const faqItems = document.querySelectorAll(".faq-item h3");
+    faqItems.forEach(item => {
+      item.addEventListener("click", () => {
+        item.parentElement.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>
