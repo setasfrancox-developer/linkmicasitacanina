@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   background: #e9d8fd; /* Fondo exterior */
   font-family: 'Poppins', Arial, sans-serif;
@@ -35,8 +36,8 @@ body {
 
 /* Header */
 header {
-  margin-top: 30px;       /* baja un poco el bloque */
-  margin-bottom: 20px;    /* acerca más los botones */
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -44,7 +45,7 @@ header {
   height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 20px; /* centrado con espacio debajo */
+  margin: 0 auto 20px;
 }
 
 header h1 {
@@ -63,7 +64,7 @@ header h2 {
 
 /* Main (botones) */
 main {
-  margin-bottom: 20px; /* acerca al footer */
+  margin-bottom: 20px;
 }
 
 main ul {
@@ -97,7 +98,7 @@ main ul li a:hover {
   display: flex;
   justify-content: center;
   gap: 25px;
-  margin: 20px 0; /* espacio arriba y abajo */
+  margin: 20px 0;
 }
 
 .social img {
@@ -112,7 +113,7 @@ main ul li a:hover {
 
 /* Footer */
 footer {
-  margin-bottom: 20px; /* no tan pegado abajo */
+  margin-bottom: 20px;
 }
 
 footer p {
@@ -120,11 +121,34 @@ footer p {
   color: #777;
 }
 
-/* Ajustes para móviles */
-@media (max-width: 480px) {
+/* ====== Media Queries para móviles y tablets ====== */
+@media (max-width: 768px) {
   .container {
-    border-radius: 0;
-    box-shadow: none;
-    padding: 15px;
+    border-radius: 0 !important;  /* Sin bordes redondeados */
+    box-shadow: none !important;  /* Sin sombra */
+    padding: 15px !important;     /* Ajuste de padding */
+    min-height: auto;              /* Ajusta altura al contenido */
+  }
+
+  header h1 {
+    font-size: 1.5rem;            /* Ajuste nombre */
+  }
+
+  header h2 {
+    font-size: 0.9rem;            /* Ajuste subtítulo */
+  }
+
+  main ul li a {
+    font-size: 0.95rem;           /* Ajuste botones */
+    padding: 12px;
+  }
+
+  .social img {
+    width: 28px;
+    height: 28px;
+  }
+
+  footer p {
+    font-size: 0.8rem;
   }
 }
