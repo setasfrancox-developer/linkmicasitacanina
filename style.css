@@ -114,6 +114,7 @@ footer p {
   color: #777;
 }
 
+/* --- Media Queries --- */
 
 /* Estilos para computadoras (cuando la pantalla es más ancha que 780px) */
 @media (min-width: 781px) {
@@ -133,36 +134,46 @@ footer p {
 /* Estilos para móviles (cuando la pantalla es de 780px o menos) */
 @media (max-width: 780px) {
   body {
-    padding: 0 !important;
+    padding: 0;
+    min-height: auto;
   }
 
   .container {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    padding: 15px !important;
-    min-height: auto !important;
-    max-width: 100% !important;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 100vh;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  header, main, footer {
+    padding: 0;
+  }
+
+  .logo {
+    width: 90px;
+    height: 90px;
   }
 
   header h1 {
-    font-size: 1.5rem !important;
+    font-size: 1.8rem;
   }
 
   header h2 {
-    font-size: 0.9rem !important;
+    font-size: 1rem;
   }
 
   main ul li a {
-    font-size: 0.95rem !important;
-    padding: 12px !important;
+    font-size: 1rem;
+    padding: 14px;
   }
 
   .social img {
-    width: 28px !important;
-    height: 28px !important;
+    width: 32px;
+    height: 32px;
   }
 
   footer p {
-    font-size: 0.8rem !important;
+    font-size: 0.85rem;
   }
 }
