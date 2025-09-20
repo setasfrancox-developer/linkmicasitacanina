@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh; 
 }
 
 /* Contenedor principal */
@@ -141,7 +141,7 @@ footer p {
   .container {
     border-radius: 0;
     box-shadow: none;
-    min-height: 100vh;
+    min-height: 100dvh; /* LÍNEA CORREGIDA */
     max-width: 100%;
     padding: 15px;
   }
