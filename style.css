@@ -1,22 +1,16 @@
-/* =====================================================
-   Importar fuente
-===================================================== */
+/* -------------------- Importar fuente -------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* =====================================================
-   Reset general
-===================================================== */
+/* -------------------- Reset -------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =====================================================
-   Body
-===================================================== */
+/* -------------------- Body -------------------- */
 body {
-  background: #e9d8fd;
+  background: #e9d8fd; /* morado de fondo para escritorio */
   font-family: 'Poppins', Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -24,9 +18,7 @@ body {
   min-height: 100vh;
 }
 
-/* =====================================================
-   Contenedor principal
-===================================================== */
+/* -------------------- Contenedor principal -------------------- */
 .container {
   background: #fff;
   width: 100%;
@@ -36,34 +28,19 @@ body {
   min-height: 100vh;
 }
 
-/* =====================================================
-   Header
-===================================================== */
+/* -------------------- Header -------------------- */
 header {
-  margin: 30px 0 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   padding: 0 10px;
 }
 
-header .logo {
+.logo {
   width: 90px;
   height: 90px;
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 20px;
-}
-
-header h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #444;
-  margin: 0 0 2px;
-  line-height: 1.4;
 }
 
 /* Imagen de guardería */
@@ -77,14 +54,26 @@ header p {
   margin-bottom: 15px;
 }
 
-/* =====================================================
-   Main
-===================================================== */
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #444;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+/* -------------------- Main -------------------- */
 main {
   margin-bottom: 20px;
 }
 
-/* Botones generales */
 main ul {
   list-style: none;
   display: flex;
@@ -117,18 +106,17 @@ main a.btn-menu:hover {
   color: #fff;
 }
 
-/* =====================================================
-   Sección Guardería (Main Guardería)
-===================================================== */
+/* -------------------- Correcciones solo Guardería -------------------- */
 .main-guarderia h2 {
   font-weight: 600;
   color: #333;
-  margin: 0 0 8px;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
 .main-guarderia p {
   font-weight: 400;
-  margin: 0 0 0;
+  margin-top: 0;
 }
 
 .main-guarderia ul {
@@ -178,14 +166,9 @@ main a.btn-menu:hover {
   color: #fff;
 }
 
-/* =====================================================
-   FAQs
-===================================================== */
-.page-faq header {
-  margin-top: 0;
-}
-
+/* -------------------- FAQ -------------------- */
 .faq-item {
+  margin-top: -1px;
   margin-bottom: 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -211,9 +194,12 @@ main a.btn-menu:hover {
   display: block;
 }
 
-/* =====================================================
-   Redes sociales
-===================================================== */
+/* Ajuste específico solo en la página de FAQ */
+.page-faq header {
+  margin-top: 0;
+}
+
+/* -------------------- Redes sociales -------------------- */
 .social {
   display: flex;
   justify-content: center;
@@ -231,9 +217,7 @@ main a.btn-menu:hover {
   transform: scale(1.1);
 }
 
-/* =====================================================
-   Footer
-===================================================== */
+/* -------------------- Footer -------------------- */
 footer {
   margin-bottom: 20px;
 }
@@ -243,30 +227,56 @@ footer p {
   color: #777;
 }
 
+/* =====================================================
+   Media Queries
+===================================================== */
+
+/* Escritorio */
+@media (min-width: 781px) {
+  .container {
+    border-radius: 24px;
+    padding: 30px 25px;
+    max-width: 420px;
+    min-height: 100vh;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+}
+
+/* Móvil */
 @media (max-width: 780px) {
-  body { 
-    display: block;      /* quita el flex centrado */
+  html, body {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
     padding: 0;
-    background: #e9d8fd; /* mantiene morado a los lados si quieres */
+    display: block;
+    background: #e9d8fd;
   }
 
   .container {
+    min-height: 100%;
+    width: 100%;
+    max-width: 100%;
     border-radius: 0;
     box-shadow: none;
-    height: 100vh;       /* fuerza a ocupar toda la altura del viewport */
-    max-width: 100%;
     padding: 15px;
+    margin: 0 auto;
+    background: #fff;
     overflow-y: auto;
-    background: #fff;    /* fondo blanco arriba y abajo */
-    margin: 0 auto;      /* centra horizontalmente si quieres mantener el morado a los lados en escritorio */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   header, main, footer { padding: 0; }
 
   .logo { width: 90px; height: 90px; }
+
   header h1 { font-size: 1.8rem; }
   header h2, header p { font-size: 1rem; font-weight: 400; }
+
   main ul li a { font-size: 1rem; padding: 14px; }
+
   .social img { width: 32px; height: 32px; }
   footer p { font-size: 0.85rem; }
 }
