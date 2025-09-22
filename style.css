@@ -243,30 +243,22 @@ footer p {
   color: #777;
 }
 
-/* =====================================================
-   Media Queries
-===================================================== */
-@media (min-width: 781px) {
-  .container {
-    border-radius: 24px;
-    padding: 30px 25px;
-    max-width: 420px;
-    min-height: 100vh;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-}
-
 @media (max-width: 780px) {
-  body { padding: 0; }
+  body { 
+    display: block;      /* quita el flex centrado */
+    padding: 0;
+    background: #e9d8fd; /* mantiene morado a los lados si quieres */
+  }
 
   .container {
     border-radius: 0;
     box-shadow: none;
-    min-height: 100vh;
+    height: 100vh;       /* fuerza a ocupar toda la altura del viewport */
     max-width: 100%;
     padding: 15px;
     overflow-y: auto;
-    background: #fff;
+    background: #fff;    /* fondo blanco arriba y abajo */
+    margin: 0 auto;      /* centra horizontalmente si quieres mantener el morado a los lados en escritorio */
   }
 
   header, main, footer { padding: 0; }
