@@ -10,7 +10,7 @@
 
 /* -------------------- Body -------------------- */
 body {
-  background: #e9d8fd; /* morado de fondo para escritorio */
+  background: #e9d8fd;
   font-family: 'Poppins', Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -26,6 +26,7 @@ body {
   flex-direction: column;
   text-align: center;
   min-height: 100vh;
+ 
 }
 
 /* -------------------- Header -------------------- */
@@ -51,21 +52,21 @@ header {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* margen ajustable con el h1 */
 }
 
 header h1 {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* margen entre h1 y p */
 }
 
+/* DESCRIPCIÓN DE GUARDERÍA con tamaño igual a servicios */
 header p {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1rem;      /* mismo tamaño que servicios */
+  font-weight: 400;     /* normal */
   color: #444;
-  margin-top: 0px;
-  margin-bottom: 2px;
+  margin-bottom: 20px;
   line-height: 1.4;
 }
 
@@ -74,6 +75,7 @@ main {
   margin-bottom: 20px;
 }
 
+/* Botones */
 main ul {
   list-style: none;
   display: flex;
@@ -96,7 +98,7 @@ main a.btn-menu {
   font-weight: 600;
   font-size: 1rem;
   transition: 0.3s;
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* separación entre botones */
 }
 
 main ul li a:hover,
@@ -111,14 +113,32 @@ main a.btn-menu:hover {
   font-weight: 600;
   color: #333;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 0px; /* margen ajustado con el p */
 }
 
 .main-guarderia p {
   font-weight: 400;
   margin-top: 0;
+ 
 }
 
+/* Párrafo debajo del h1 en la sección de guardería */
+header p {
+  font-size: 1rem;   /* mismo tamaño que otros párrafos */
+  font-weight: 400;  /* normal, no negrita */
+  color: #444;
+  margin-top: 0px;   /* opcional */
+  margin-bottom: 2px; /* controla la separación con el h2 de ¿Qué incluye? */
+  line-height: 1.4;
+}
+
+/* Ajusta el h2 que sigue */
+.main-guarderia h2 {
+  margin-top: 0;     /* quita margen arriba */
+  margin-bottom: 8px;
+}
+
+/* Lista con checkmarks solo en guardería */
 .main-guarderia ul {
   list-style: none;
   display: flex;
@@ -134,7 +154,7 @@ main a.btn-menu:hover {
   font-size: 0.95rem;
   line-height: 1.4;
   position: relative;
-  padding-left: 28px;
+  padding-left: 28px; /* espacio para el check */
 }
 
 .main-guarderia ul li::before {
@@ -146,6 +166,7 @@ main a.btn-menu:hover {
   top: 0;
 }
 
+/* Botones solo en Guardería */
 .main-guarderia .btn-menu {
   display: block;
   text-align: center;
@@ -194,11 +215,6 @@ main a.btn-menu:hover {
   display: block;
 }
 
-/* Ajuste específico solo en la página de FAQ */
-.page-faq header {
-  margin-top: 0;
-}
-
 /* -------------------- Redes sociales -------------------- */
 .social {
   display: flex;
@@ -227,56 +243,33 @@ footer p {
   color: #777;
 }
 
-/* =====================================================
-   Media Queries
-===================================================== */
-
-/* Escritorio */
+/* -------------------- Media Queries -------------------- */
 @media (min-width: 781px) {
   .container {
     border-radius: 24px;
     padding: 30px 25px;
     max-width: 420px;
-    min-height: 100vh;
+    min-height: 100vh; /* importante para cubrir arriba/abajo */
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 }
-
-/* Móvil */
+ 
 @media (max-width: 780px) {
-  html, body {
-    height: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    display: block;
-    background: #e9d8fd;
-  }
-
+  body { padding: 0; }
   .container {
-    min-height: 100%;
-    width: 100%;
-    max-width: 100%;
     border-radius: 0;
     box-shadow: none;
+    min-height: 100vh;
+    max-width: 100%;
     padding: 15px;
-    margin: 0 auto;
-    background: #fff;
     overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    background: #fff;
   }
-
   header, main, footer { padding: 0; }
-
   .logo { width: 90px; height: 90px; }
-
   header h1 { font-size: 1.8rem; }
   header h2, header p { font-size: 1rem; font-weight: 400; }
-
   main ul li a { font-size: 1rem; padding: 14px; }
-
   .social img { width: 32px; height: 32px; }
   footer p { font-size: 0.85rem; }
 }
